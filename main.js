@@ -1,8 +1,10 @@
 let scorePlayer = 0;
 $("#score").append(scorePlayer);
 hangman = 0;
+let door1 = {q: "Choose the right Door", as: [1, 2, 3],s: Math.ceil(Math.random() * 3)};
 
-let quiz1 = { q: "kjdhfkjhskfjh", s: "1", as: [1, 2, 3] };
+let quizs = [{ q: "What is the capital of Russia ?", s: "Moscow", as: ["Moscow", "Mosccow", "Mocsow"] },{q: "Nice ?", s: "nice", as:["nice", "yes", "no"]}]
+
 
 ///random quizs
 const shuffle = (array) => {
@@ -19,19 +21,41 @@ const displayQuiz = (quiz) =>
     <h4 class="qstitle">QUIZ STAGE</h4>
         <h4 class="qtitle">${quiz.q}</h4>
         <div class="quizans">
-          <button id="s1" class="btn" onclick="checkQuiz(${quiz.as[0]})">
+          <button id="s1" class="btn" onclick="checkQuiz('${quiz.as[0]}')">
             ${quiz.as[0]}
           </button>
-          <button id="s2" class="btn" onclick="checkQuiz(${quiz.as[1]})">
+          <button id="s2" class="btn" onclick="checkQuiz('${quiz.as[1]}')">
             ${quiz.as[1]}
           </button>
-          <button id="s3" class="btn" onclick="checkQuiz(${quiz.as[2]})">
+          <button id="s3" class="btn" onclick="checkQuiz('${quiz.as[2]}')">
             ${quiz.as[2]}
           </button>
         </div>
       </div>`
   );
-$("#quizz").fadeIn(3000);
+///////////////////////Door Choice //////
+// const displayDoor = (door) =>
+//   $("#playzone").append(
+//     `<div id= 'door'>
+//     <h4 class="qstitle">QUIZ STAGE</h4>
+//         <h4 class="qtitle">${door.q}</h4>
+//         <div class="quizans">
+//           <img src="1" id="s1" class="btn" onclick="checkDoor('${door.as[0]}')"alt="">
+            
+//           
+//           <img src="2" id="s2" class="btn" onclick="checkDoor('${door.as[1]}')"alt="">
+            
+//           
+//           <img src="" id="s3" class="btn" onclick="checkDoor('${door.as[2]}')"alt="">
+            
+          
+//         </div>
+//       </div>`
+//   );
+
+
+
+$("#doorz").fadeIn(3000);
 
 // welcome frame disable
 $("#start").click(() => {
@@ -52,7 +76,7 @@ $("#start").click(() => {
 const checkQuiz = function (answer) {
   $("#quizz").hide();
   console.log(answer);
-  if (answer === parseInt(quiz1.s)) {
+  if (answer === quiz1.s) {
     scorePlayer++;
     $("#score").text(scorePlayer);
     $("#playzone").append(`<h4 class="qtitle">NICE ONE !</h4>
@@ -68,3 +92,4 @@ const checkQuiz = function (answer) {
     $("#man").attr({ src: `./assets/hangman/${x2}.svg` });
   }
 };
+
