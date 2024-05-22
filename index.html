@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cikon</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div id="hangman" class="intefrace">
+        <img src="./assets/hangman/5.svg" id="man" />
+        <div id="score" class="score"></div>
+      </div>
+      <div id="gameplay" class="intefrace">
+        <div id="wlc-head" class="header">
+          <h1>WELCOME TO HANGMAN !</h1>
+          <h6>PERFORMED BY S & A</h6>
+        </div>
+
+        <div id="playzone" class="content">
+          <button id="start" class="btn">START GAME</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+html {
+  font-family: "Pixelify Sans", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Pixelify Sans", sans-serif;
+  background-color: #eaf8c4;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+  border: solid 2px #000;
+  border-radius: 20px;
+}
+.intefrace {
+  width: 80vw;
+  border-radius: 20px;
+  border: solid 2px #000;
+  margin: 20px;
+  padding: 10px;
+}
+
+.btn {
+  border: none;
+  background-color: #000;
+  color: #eaf8c4;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Pixelify Sans", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
