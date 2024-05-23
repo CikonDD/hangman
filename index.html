@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
     <title>HANGMAN</title>
-    <link rel="icon" type="image/x-icon" href="https://freesvg.org/storage/img/thumb/Anonymous_Gallows.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://freesvg.org/storage/img/thumb/Anonymous_Gallows.png"
+    />
     <!-- styles -->
     <link rel="stylesheet" href="style.css" />
     <!-- fonts -->
@@ -21,14 +25,15 @@
     />
   </head>
   <body>
+    <div id="scoreMessage">Score saved</div>
+    <img class="key" src="./assets/doors/key.png" />
     <div class="main">
       <div id="hangman" class="intefrace">
         <img src="./assets/hangman/5.svg" id="man" alt="" />
-        <div>THE SCORE : <span id="score" class="score"></span></div>
       </div>
       <div id="gameplay" class="intefrace">
         <div id="wlc-head" class="header">
-          <h1>WELCOME TO HANGMAN !</h1>
+          <h1 class="gameover">WELCOME TO HANGMAN !</h1>
           <h6>PERFORMED BY S & A</h6>
         </div>
         <div id="playzone" class="content">
@@ -39,9 +44,14 @@
         RESET THES SCORES
       </button>
     </div>
-
+    <div class="scorat">THE SCORE : <span id="score" class="score"></span></div>
+    <p class="copyright">made it with love by <strong>S & A</strong></p>
+    <p class="textualite">an RBK project</p>
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="./thehangman.js"></script>
+    <audio id="audio" loop autoplay>
+      <source src="./assets/music/bgloop.mp3" type="audio/mpeg" />
+    </audio>
   </body>
 </html>

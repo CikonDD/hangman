@@ -1,6 +1,6 @@
-html,
-body {
-  height: 60vh;
+html {
+  text-transform: uppercase;
+  height: 100vh;
   margin: 0;
   font-family: "Pixelify Sans", sans-serif;
   display: flex;
@@ -8,6 +8,10 @@ body {
   align-items: center;
   background-color: #eaf8c4;
   text-align: center;
+  cursor: url("./assets/Black-Pixel-Mouse-Cursor-Arow-Fixed.png"), auto;
+  background-image: url("./assets/bg.png");
+  background-size: 50%;
+  animation: fondAnimee 120s linear infinite;
 }
 
 * {
@@ -17,13 +21,11 @@ body {
 }
 
 .score {
-  font-size: 22px;
+  font-size: 40px;
 }
 .main {
-  top: 10vh;
-  position: absolute;
   height: 80vh;
-  width: 80vw;
+  width: 980px;
   border: solid 2px #000;
   border-radius: 20px;
 }
@@ -64,12 +66,10 @@ body {
   border-radius: 30px;
 }
 
-/* #doorstage {
-} */
-
-.adoor {
-  height: 200px;
-  width: 200px;
+.adoor,
+.adoor1 {
+  height: 180px;
+  width: 180px;
 }
 
 /* #playzone {
@@ -130,6 +130,152 @@ body {
   font-weight: 900;
   font-size: 12px;
 }
+
+#clear {
+  background-color: #000;
+  color: #000;
+  background-color: #eaf8c4;
+  border: solid 2px #000;
+  font-weight: 900;
+}
 body {
   cursor: url("./80-800370_png-file-aim-cursor-clipart.png"), auto;
+}
+.mathpuzzle table {
+  margin: auto;
+  border-collapse: collapse;
+  font-family: "VT323";
+}
+.mathpuzzle td {
+  text-align: center;
+  width: 50px;
+  height: 20px;
+  border: 0px solid black;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 26px;
+}
+.mathpuzzle tr {
+  font-weight: bold;
+  font-size: 26px;
+}
+.mathpuzzle .number {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border: 0px solid black;
+  padding: 5px;
+}
+
+.mathpuzzle .input {
+  height: 50px;
+  width: 90px;
+  text-align: center;
+  background: #eaf8c4;
+  text-decoration: none;
+  font-family: "VT323";
+  margin: 0;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  font-size: 20px;
+  border: 2px solid black;
+}
+.mathpuzzle .input:active,
+.mathpuzzle .input:focus {
+  border: none;
+  text-decoration: none;
+  border: 2px solid black;
+  outline: none;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+#scoreMessage {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  background-color: #eaf8c4;
+  padding: 20px;
+  border: 2px solid black;
+  z-index: 1000;
+  border-radius: 20px;
+  filter: pixelate(0px);
+  animation: pixelizeAnimation 1ms infinite; /* Animation */
+}
+
+@keyframes pixelizeAnimation {
+  0% {
+    filter: pixelate(0px); /* No pixelation at the start */
+  }
+  50% {
+    filter: pixelate(5px); /* Medium pixelation at the middle */
+  }
+  100% {
+    filter: pixelate(0px); /* No pixelation at the end */
+  }
+}
+
+.copyright {
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 13vh;
+  left: 24vw;
+  text-transform: uppercase;
+}
+.textualite {
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 13vh;
+  right: 24vw;
+  text-transform: uppercase;
+}
+
+#start,
+.btn,
+.adoor {
+  animation: wiggle 6s linear infinite;
+}
+
+.key {
+  position: fixed;
+  left: 40vh;
+  font-size: 18px;
+  max-width: 100px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.scorat {
+  position: absolute;
+  left: 42vh;
+  font-size: 24px;
+  top: 16vw;
+  padding: 20px;
+  z-index: 1000;
+}
+.gameover {
+  font-size: 50px;
+}
+
+.main {
+  background-color: #eaf8c4;
+}
+
+@keyframes fondAnimee {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#audio {
+  display: none;
 }
