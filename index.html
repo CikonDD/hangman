@@ -22,18 +22,20 @@
     <div class="main">
       <div id="hangman" class="intefrace">
         <img src="./assets/hangman/5.svg" id="man" />
-        <div id="score" class="score"></div>
+        <div>THE SCORE : <span id="score" class="score"></span></div>
       </div>
       <div id="gameplay" class="intefrace">
         <div id="wlc-head" class="header">
           <h1>WELCOME TO HANGMAN !</h1>
           <h6>PERFORMED BY S & A</h6>
         </div>
-
         <div id="playzone" class="content">
           <button id="start" class="btn">START GAME</button>
         </div>
       </div>
+      <button id="reset" onclick="resetScore()" class="btn">
+        RESET THES SCORES
+      </button>
     </div>
 
     <!-- script -->

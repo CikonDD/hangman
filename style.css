@@ -1,23 +1,33 @@
-html {
+html,
+body {
+  height: 60vh;
+  margin: 0;
   font-family: "Pixelify Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaf8c4;
+  text-align: center;
 }
+
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-body {
-  font-family: "Pixelify Sans", sans-serif;
-  background-color: #eaf8c4;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  margin: 20px;
-  padding: 10px;
+
+.score {
+  font-size: 22px;
+}
+.main {
+  top: 10vh;
+  position: absolute;
+  height: 80vh;
+  width: 80vw;
   border: solid 2px #000;
   border-radius: 20px;
 }
 .intefrace {
-  width: 80vw;
   border-radius: 20px;
   border: solid 2px #000;
   margin: 20px;
@@ -33,6 +43,9 @@ body {
   font-family: "Pixelify Sans", sans-serif;
   margin-top: 30px;
   margin-bottom: 30px;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .qtitle {
@@ -47,4 +60,73 @@ body {
 #man {
   height: 200px;
   width: 200px;
+  animation: flo 5s infinite;
+  border-radius: 30px;
+}
+
+/* #doorstage {
+} */
+
+.adoor {
+  height: 200px;
+  width: 200px;
+}
+
+/* #playzone {
+
+} */
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+#enter {
+  animation: wiggle 6s linear infinite;
+}
+
+@keyframes flo {
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+#gameplay {
+  border: #000 0px;
+}
+
+#reset {
+  background-color: #000;
+  color: #000;
+  background-color: #eaf8c4;
+  border: solid 2px #000;
+  font-weight: 900;
+  font-size: 12px;
 }
