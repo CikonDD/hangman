@@ -309,15 +309,15 @@ const saveScore = () => {
 const loadScore = () => {
   const savedScore = localStorage.getItem("hangmanScore");
   if (savedScore !== null) {
-    scorePlayer = parseInt(savedScore);
+    scorePlayer = (savedScore);
     $("#score").text(scorePlayer);
   }
 };
 
 // Function to save the score to localStorage
 const resetScore = () => {
-  var rst = 0;
-  localStorage.setItem("hangmanScore", parseInt(rst));
+  
+  localStorage.setItem("hangmanScore", 0);
   loadScore();
   $("#reset").hide();
 };
