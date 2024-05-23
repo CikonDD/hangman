@@ -332,45 +332,67 @@ const key = () => {
 };
 
 // Fonction pour détecter la frappe de la touche "k" "e" "y"
-$(document).keydown(function (event) {
-  // Récupérer la touche pressée
-  var keyPressed = String.fromCharCode(
-    event.keyCode || event.which
-  ).toLowerCase();
-  let counter = 0;
-  // Vérifier si la touche pressée correspond à la prochaine lettre dans "key"
-  if (keyPressed === "k" || keyPressed === "e" || keyPressed === "y") {
-    // Si oui, ajouter la lettre à la variable keyBuffer
-    keyBuffer += keyPressed;
+// $(document).keydown(function (event) {
+//   // Récupérer la touche pressée
+//   let keyPressed = String.fromCharCode(
+//     event.keyCode || event.which
+//   ).toLowerCase();
+//   let counter = 0;
+//   let keyBuffer = "";
+//   // Vérifier si la touche pressée correspond à la prochaine lettre dans "key"
+//   if (keyPressed === "k" || keyPressed === "e" || keyPressed === "y") {
+//     // Si oui, ajouter la lettre à la variable keyBuffer
+//     keyBuffer += keyPressed;
 
-    // Vérifier si la variable keyBuffer contient le mot complet "key"
-    if (keyBuffer === "key") {
-      // Si oui, appeler la fonction key() et réinitialiser keyBuffer
+//     // Vérifier si la variable keyBuffer contient le mot complet "key"
+//     if (keyBuffer === "key") {
+//       // Si oui, appeler la fonction key() et réinitialiser keyBuffer
 
-      $("#playzone").append('<h4 class="qtitle">YOU CAN DO IT</h4>');
-      $("#playzone").show();
-      keyBuffer = "";
-    }
-  } else {
-    // Si la touche pressée ne correspond pas à la prochaine lettre dans "key", réinitialiser keyBuffer
-    keyBuffer = "";
-    counter++;
+//       $("#playzone").append('<h4 class="qtitle">YOU CAN DO IT</h4>');
+//       $("#playzone").show();
+//       keyBuffer = "";
+//     }
+//   } else {
+//     // Si la touche pressée ne correspond pas à la prochaine lettre dans "key", réinitialiser keyBuffer
+//     keyBuffer = "";
+//     counter++;
 
-    if (counter < 5) {
-      scorePlayer--;
-      $("#score").text(scorePlayer);
-      saveScore();
-      // Update the hangman image to show the next stage of the hangman
-      let x2 = $("#man").attr("src");
-      x2 = x2[x2.length - 5];
-      x2++;
-      $("#man").attr({ src: `./assets/hangman/${x2}.svg` });
-    }
-    $("#playzone").append('<h4 class="qtitle">ONE MORE TIME</h4>');
-  }
-});
+//     if (counter < 5) {
+//       scorePlayer--;
+//       $("#score").text(scorePlayer);
+//       saveScore();
+//       // Update the hangman image to show the next stage of the hangman
+//       let x2 = $("#man").attr("src");
+//       x2 = x2[x2.length - 5];
+//       x2++;
+//       $("#man").attr({ src: `./assets/hangman/${x2}.svg` });
+//     }
+//     $("#playzone").append('<h4 class="qtitle">ONE MORE TIME</h4>');
+//   }
+// });
 
 // Load the score when the page is loaded
 $(document).ready(() => {
   loadScore();
 });
+
+
+
+
+/////////////// Math Riddle
+let x = Math.ceil(Math.random()*99)
+let mathRiddle = {riddle:x,answer:[x,x+4,x+5,x+6]}
+function checkRiddle(arr){
+  if (
+    //true
+    mathRiddle.answer[0] === arr[2] - arr[3] &&
+    mathRiddle.answer[1] === arr[0] + arr[1] &&
+    mathRiddle.answer[2] === arr[0] + arr[2] &&
+    mathRiddle.answer[3] === arr[1] + arr[3]
+  ) {return "welldone"/////append hide() show()
+  }else{
+    ///////////// false whatsapp nigggga
+  }
+
+
+}
